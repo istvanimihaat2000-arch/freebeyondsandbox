@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond Sandbox - Official Download</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+    }
+
+    header {
+        background: #020617;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        color: #94a3b8;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        background: #22c55e;
+        border: none;
+        padding: 15px 35px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #16a34a;
+    }
+
+    .section {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: #020617;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #1e293b;
+    }
+
+    .download-box {
+        text-align: center;
+        background: #020617;
+        padding: 40px;
+        border-radius: 15px;
+        border: 1px solid #1e293b;
+    }
+
+    .progress {
+        width: 100%;
+        height: 20px;
+        background: #1e293b;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+        display: none;
+    }
+
+    .progress-bar {
+        height: 100%;
+        width: 0%;
+        background: #22c55e;
+        transition: width 0.2s;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #64748b;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    Beyond Sandbox Official
+</header>
+
+<section class="hero">
+    <h1>Beyond Sandbox</h1>
+    <p>The next generation physics sandbox experience.</p>
+    <button class="btn" onclick="startDownload()">Download v2.4.1</button>
+</section>
+
+<section class="section">
+    <h2>Features</h2>
+    <div class="features">
+        <div class="card">Realistic Physics Engine</div>
+        <div class="card">Advanced NPC AI</div>
+        <div class="card">Full Mod Support</div>
+        <div class="card">Multiplayer Sandbox Mode</div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>System Requirements</h2>
+    <div class="card">
+        <p><b>OS:</b> Windows 10/11</p>
+        <p><b>CPU:</b> Intel i5 or better</p>
+        <p><b>RAM:</b> 8 GB</p>
+        <p><b>GPU:</b> GTX 960+</p>
+        <p><b>Storage:</b> 5 GB</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="download-box">
+        <h2>Download Installer</h2>
+        <p>Latest Version: v2.4.1 (Stable)</p>
+        <button class="btn" onclick="startDownload()">Start Download</button>
+
+        <div class="progress" id="progress">
+            <div class="progress-bar" id="bar"></div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Beyond Sandbox Team | All rights reserved
+</footer>
+
+<script>
+function startDownload() {
+    let progress = document.getElementById("progress");
+    let bar = document.getElementById("bar");
+
+    progress.style.display = "block";
+    let width = 0;
+
+    let interval = setInterval(() => {
+        width += Math.random() * 10;
+        bar.style.width = width + "%";
+
+        if (width >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }, 500);
+        }
+    }, 200);
+}
+</script>
+
+</body>
+</html>
